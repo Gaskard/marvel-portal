@@ -19,11 +19,13 @@ const CharInfo = (props) => {
 
     useEffect(() => {
         updateChar();
+ // eslint-disable-next-line
     }, [])
 
     useEffect(() => {
         updateChar();
-    }, [char])
+ // eslint-disable-next-line
+    }, [props.charId])
     
 
     const updateChar = () => {
@@ -31,9 +33,7 @@ const CharInfo = (props) => {
         if(!charId) {
             return;
         }
-
         onCharLoading();
-
             marvelService
             .getCharacter(charId)
             .then(onCharLoaded)
