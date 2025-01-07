@@ -1,5 +1,4 @@
 import './comicsList.scss';
-import Banner from './Banner.jpg';
 import useMarvelService from '../../services/MarvelService';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import Spinner from '../spinner/Spinner';
@@ -69,7 +68,6 @@ const ComicsList = () => {
 
     return (
         <div className="comics__list">
-            <img src={Banner} alt="banner" />
             {errorMessage}
             {items}
             {spinner}
